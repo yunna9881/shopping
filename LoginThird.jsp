@@ -38,27 +38,30 @@
       <div class="col-md-5 p-lg-5 mx-auto my-5">       		
         <c:choose >
         <c:when test="${param.login eq 'user'}">
-        	<form method="get" action="Data">
+        	<form method="get" action="UserLogin">
        	 	<h1 class="display-4 font-weight-normal"> USER ID</h1>
-        	<input type="text" name="id">
+        	<input type="text" name="useName">
         	<br> <br>
        	 	<h1 class="display-4 font-weight-normal">PASSWORD</h1>
         	<input type="text" name="passwd">
         	<br><br>
         	<input type="submit" class="btn btn-outline-secondary" value="LOG IN">
         	</form>
+<!--         	<h1 class="display-4 font-weight-normal"><%=request.getAttribute("errorMessage") %></h1>  -->
         </c:when>
         
         <c:when test="${param.login eq 'csr'}">
-             <form method="get" action="Data">
+             <form method="get" action="AdminLogin">
         	<h1 class="display-4 font-weight-normal"> ADMIN ID</h1>
-        	<input type="text" name="id">
+        	<input type="text" name="useName">
         	<br> <br>
        	 	<h1 class="display-4 font-weight-normal">PASSWORD</h1>
        	 	<input type="text" name="passwd">
        	 	<br><br>
        	 	<input type="submit" class="btn btn-outline-secondary" value="LOG IN">
+<!--    	 	<h1 class="display-4 font-weight-normal"><%=request.getAttribute("errorMessage") %></h1> -->
        	 	</form>
+       	 	
         </c:when>
         </c:choose>
       </div>
