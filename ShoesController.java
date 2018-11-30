@@ -29,7 +29,7 @@ public class ShoesController extends HttpServlet {
 		
 		 String connectionUrl = "jdbc:mysql://localhost:3306/mvcdb";
 		 String connectionUser = "root";
-		 String connectionPassword = "wonyunnaA9881!";
+		 String connectionPassword = "";
 		 
 		 shoesDAO =new ShoesDAO(connectionUrl, connectionUser, connectionPassword);
      try {
