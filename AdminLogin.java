@@ -15,20 +15,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Data
+ * Servlet implementation class AdminLogin
  */
-@WebServlet("/Data")
-public class Data extends HttpServlet {
+@WebServlet("/AdminLogin")
+public class AdminLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Connection con;
 	PreparedStatement pr;
-	ResultSet rs;
-	
-	
+	ResultSet rs;  
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Data() {
+    public AdminLogin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -48,26 +46,47 @@ public class Data extends HttpServlet {
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 		
-		String id = request.getParameter("id");
-		String passwd = request.getParameter("passwd");
-		
-		con=DriverManager.getConnection(url, user, pass);
-		pr=con.prepareStatement("select * from  where manufacturer=?");		
-		
-		
-		LoginNamePrint info = new LoginNamePrint();
-		info.setId(id);
-		info.setPasswd(passwd);
-		request.setAttribute("information", info);
+			String userName = request.getParameter("useName");
+			String password = request.getParameter("passwd");
 
-		RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
-		rd.forward(request, response);
+			
+			con=DriverManager.getConnection(url, user, pass);
+			System.out.println(con);
+			pr=con.prepareStatement("select * from csr where userName=? and password=?");		
 		
-		
+			
+			pr.setString(1, userName);
+			pr.setString(2, password);
+			rs=pr.executeQuery();
+			
+			
+			
+			if(rs.next())
+			{
+
+				LoginNamePrint info = new LoginNamePrint();
+				info.setId(userName);
+				info.setPasswd(password);
+				request.setAttribute("information", info);
+
+				
+				RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
+				rd.forward(request, response);
+			
+			
+			}else {
+				out.println(request.getAttribute("errorMessage"));
+				out.print("noooooooooo");
+				 //the following will keep users in the login page
+				 RequestDispatcher rd = request.getRequestDispatcher("LoginSecond.jsp");
+				 rd.forward(request, response); 
+			}
+	
+
 		
 		}catch(Exception e)
 		{
-			System.out.print(e);
+			e.printStackTrace();
 		}
 	}
 
