@@ -30,10 +30,9 @@
 
 	<nav class="site-header sticky-top py-1">
 		<div class="container d-flex flex-column flex-md-row justify-content-between">
-				<a class="py-2 d-none d-md-inline-block" href="#">LOG IN</a>
-        		<a class="py-2 d-none d-md-inline-block" href="#">SIGN UP</a>
-        		<a class="py-2 d-none d-md-inline-block" href="#">CART</a>
-        	</a>
+				<a class="py-2 d-none d-md-inline-block" href="LoginFirst.jsp">LOG IN</a>
+        		<a class="py-2 d-none d-md-inline-block" href="CreateAccount.jsp">SIGN UP</a>
+        		<a class="py-2 d-none d-md-inline-block" href="Cart.jsp">CART</a>
         </div>
     </nav>
     
@@ -47,7 +46,6 @@
         <a class="py-2 d-none d-md-inline-block" href="Women.jsp">Women's</a>
         <a class="py-2 d-none d-md-inline-block" href="Men.jsp">Men's</a>
         <a class="py-2 d-none d-md-inline-block" href="Kid.jsp">Kids'</a>
-        
       </div>
     </nav>
 
@@ -57,7 +55,6 @@
         <p class="lead font-weight-normal">Take 30% off your order of $99 or more</p>
         <p class="lead font-weight-normal">Use Code:SHOPWITH2N</p>       
         
-
         <a class="btn btn-outline-secondary" href="#">SHOP NOW</a>
       </div>
 
