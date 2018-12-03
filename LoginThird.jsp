@@ -40,10 +40,10 @@
         <c:when test="${param.login eq 'user'}">
         	<form method="get" action="UserLogin">
        	 	<h1 class="display-4 font-weight-normal"> USER ID</h1>
-        	<input type="text" name="useName">
+        	<input type="text" name="userName">
         	<br> <br>
        	 	<h1 class="display-4 font-weight-normal">PASSWORD</h1>
-        	<input type="text" name="passwd">
+        	<input type="text" name="password">
         	<br><br>
         	<input type="submit" class="btn btn-outline-secondary" value="LOG IN">
         	</form>
@@ -53,10 +53,10 @@
         <c:when test="${param.login eq 'csr'}">
              <form method="get" action="AdminLogin">
         	<h1 class="display-4 font-weight-normal"> ADMIN ID</h1>
-        	<input type="text" name="useName">
+        	<input type="text" name="userName">
         	<br> <br>
        	 	<h1 class="display-4 font-weight-normal">PASSWORD</h1>
-       	 	<input type="text" name="passwd">
+       	 	<input type="text" name="password">
        	 	<br><br>
        	 	<input type="submit" class="btn btn-outline-secondary" value="LOG IN">
 <!--    	 	<h1 class="display-4 font-weight-normal"><%=request.getAttribute("errorMessage") %></h1> -->

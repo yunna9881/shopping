@@ -30,7 +30,7 @@
 
 	<nav class="site-header sticky-top py-1">
 		<div class="container d-flex flex-column flex-md-row justify-content-between">
-				<a class="py-2 d-none d-md-inline-block" href="AskLogout.jsp">LOG IN</a>
+				<a class="py-2 d-none d-md-inline-block" href="LoginFirst.jsp">LOG IN</a>
         		<a class="py-2 d-none d-md-inline-block" href="CreateAccount.jsp">SIGN UP</a>
         		<a class="py-2 d-none d-md-inline-block" href="Cart.jsp">CART</a>
         	</a>
@@ -56,24 +56,11 @@
         
         
         <h1 class="display-4 font-weight-normal">
-                
-        <%@ page import = "assignment3.LoginNamePrint" %>
-
-        <%
-			LoginNamePrint bean = (LoginNamePrint)session.getAttribute("information");
-			out.print("Welcome, " + bean.getId() + " !");
-			
-			
-		%>
-
-		
-
-		<div class="col-md-5 p-lg-5 mx-auto my-5">
-       		<a class="btn btn-outline-secondary" href="MainPage.jsp">HOME</a>
-       	</div>
-	
-
+        Do you want to Logout?
         </h1>
+        <form method="get" action="LogoutController">
+        <input type="submit" value="LOG OUT">
+		</form>
 
       </div>
 
@@ -99,4 +86,3 @@
       });
     </script>
   </body>
-</html>

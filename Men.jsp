@@ -57,6 +57,7 @@
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
+            <form target="_self" method="get" action="CartAdding">
             <select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -67,10 +68,12 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="men2" name="men2">
-        	<input type="hidden" value="cad" name="cad">
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="1" name="itemId">
+      	
         	
         	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart">     	
+       	</form>
         </div>
         <div  class="bg-light shadow-sm mx-auto" style=" width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\men\men1.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -79,6 +82,7 @@
       
       <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
+        <form target="_self" method="get" action="CartAdding">
                     <select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -89,10 +93,12 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="men3" name="men3">
-        	<input type="hidden" value="cad" name="cad">
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="2" name="itemId">
+      	
         	
         	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
+        </form>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\men\men2.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -103,6 +109,7 @@
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
+        <form target="_self" method="get" action="CartAdding">
                     <select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -113,10 +120,12 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="men4" name="men4">
-        	<input type="hidden" value="cad" name="cad">
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="3" name="itemId">
+      	
         	
         	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
+        </form>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\men\men3.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -135,8 +144,9 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="men5" name="men5">
-        	<input type="hidden" value="cad" name="cad">
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="4" name="itemId">
+      	
         	
         	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
         </div>
@@ -151,6 +161,7 @@
      <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
+        <form target="_self" method="get" action="CartAdding">
                     <select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -161,10 +172,12 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="men5" name="men5">
-        	<input type="hidden" value="cad" name="cad">
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="5" name="itemId">
+      	
         	
         	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
+        </form>
         </div>
         <div  class="bg-light shadow-sm mx-auto" style=" width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\men\men5.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -173,6 +186,7 @@
       
       <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
+        <form target="_self" method="get" action="CartAdding">
                     <select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -183,10 +197,12 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="men6" name="men6">
-        	<input type="hidden" value="cad" name="cad">
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="6" name="itemId">
+      	
         	
         	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
+        </form>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\men\men6.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">

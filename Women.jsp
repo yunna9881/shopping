@@ -26,10 +26,9 @@
 
 	<nav class="site-header sticky-top py-1">
 		<div class="container d-flex flex-column flex-md-row justify-content-between">
-				<a class="py-2 d-none d-md-inline-block" href="LoginFirst.jsp">LOG IN</a>
+				<a class="py-2 d-none d-md-inline-block" href="AskLogout.jsp">LOG OUT</a>
         		<a class="py-2 d-none d-md-inline-block" href="CreateAccount.jsp">SIGN UP</a>
         		<a class="py-2 d-none d-md-inline-block" href="Cart.jsp">CART</a>
-        	</a>
         </div>
     </nav>
     
@@ -54,10 +53,11 @@
 
     </div>
 
-	<form target="pay" method="get" action="Cart.jsp">
+
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3" > 
+        	<form target="_self" method="get" action="CartAdding">
         	<select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -67,12 +67,12 @@
         		<option value="7.5">7.5</option>
         		<option value="8">8</option>
         	</select>
-        	
-        	<input type="hidden" value="women1" name="women1">
-        	<input type="hidden" value="cad" name="cad">
-        	
-        	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
-        	
+       	
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="1" name="itemId">
+      	
+        	<input class="btn btn-outline-secondary" type="submit" value="ADD" name="add"> 
+        	</form>
         </div>
         <div  class="bg-light shadow-sm mx-auto" style=" width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\women\women1.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -81,6 +81,7 @@
       
       <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
+        	<form target="_self" method="get" action="CartAdding">
                 	<select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -90,12 +91,11 @@
         		<option value="7.5">7.5</option>
         		<option value="8">8</option>
         	</select>
-        	
-        	<input type="hidden" value="women2" name="women2">
-        	<input type="hidden" value="cad" name="cad">
-        	
-        	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
-        	
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="2" name="itemId"> 
+        	    	  	
+        	<input class="btn btn-outline-secondary" type="submit" value="ADD" name="add"> 
+        	</form>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\women\women2.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -106,6 +106,7 @@
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
+        	<form target="_self" method="get" action="CartAdding">
                 	<select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -116,11 +117,11 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="women3" name="women3">
-        	<input type="hidden" value="cad" name="cad">
-        	
-        	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
-        	
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="3" name="itemId">        	
+        	 	
+        	<input class="btn btn-outline-secondary" type="submit" value="ADD" name="add"> 
+        	</form>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\women\women3.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -129,6 +130,7 @@
       
       <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
+        	<form target="_self" method="get" action="CartAdding">
                 	<select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -139,11 +141,11 @@
         		<option value="8">8</option>
         	</select>
         	
-        	<input type="hidden" value="women4" name="women4">
-        	<input type="hidden" value="cad" name="cad">
-        	
-        	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
-        	
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="4" name="itemId">
+        	       		
+        	<input class="btn btn-outline-secondary" type="submit" value="ADD" name="add"> 
+        	</form>
         </div>
         <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\women\women4.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -156,6 +158,7 @@
      <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
+        	<form target="_self" method="get" action="CartAdding">
                 	<select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
@@ -165,12 +168,12 @@
         		<option value="7.5">7.5</option>
         		<option value="8">8</option>
         	</select>
-        	
-        	<input type="hidden" value="women5" name="women5">
-        	<input type="hidden" value="cad" name="cad">
-        	
-        	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
-        	
+
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="5" name="itemId">
+        	        	   	
+        	<input class="btn btn-outline-secondary" type="submit" value="ADD" name="add"> 
+        	</form>
         </div>
         <div  class="bg-light shadow-sm mx-auto" style=" width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\women\women5.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -179,7 +182,8 @@
       
       <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
-                	<select name="size1" class="btn btn-outline-secondary">
+        	<form target="_self" method="get" action="CartAdding">
+                <select name="size1" class="btn btn-outline-secondary">
         		<option selected="size">size</option>
         		<option value="5.5">5.5</option>
         		<option value="6">6</option>
@@ -188,19 +192,19 @@
         		<option value="7.5">7.5</option>
         		<option value="8">8</option>
         	</select>
-        	
-        	<input type="hidden" value="women6" name="women6">
-        	<input type="hidden" value="cad" name="cad">
-        	
-        	<input class="btn btn-outline-secondary" type="submit" value="CART" name="cart"> 
-        	
+
+        	<input type="hidden" value="10" name="price">
+        	<input type="hidden" value="6" name="itemId">
+        	        	   	
+        	<input class="btn btn-outline-secondary" type="submit" value="ADD" name="add"> 
+        	</form>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\women\women6.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
         </div>
       </div>
     </div>   
-    </form>
+   
 
 
 

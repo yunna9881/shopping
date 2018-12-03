@@ -8,15 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    
 
-    
     
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Welcome to 2N</title>
 
+    <!-- Bootstrap core CSS -->
 	<link href="main.css" rel="stylesheet">  
+
+    <!-- Custom styles for this template -->
     <link href="Product.css" rel="stylesheet">
   </head>
 
@@ -24,7 +25,7 @@
 
 	<nav class="site-header sticky-top py-1">
 		<div class="container d-flex flex-column flex-md-row justify-content-between">
-				<a class="py-2 d-none d-md-inline-block" href="LoginFirst.jsp">LOG IN</a>
+				<a class="py-2 d-none d-md-inline-block" href="AskLogout.jsp">LOG OUT</a>
         		<a class="py-2 d-none d-md-inline-block" href="CreateAccount.jsp">SIGN UP</a>
         		<a class="py-2 d-none d-md-inline-block" href="Cart.jsp">CART</a>
         </div>

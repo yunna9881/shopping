@@ -8,15 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    
 
-    
     
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Welcome to 2N</title>
 
+    <!-- Bootstrap core CSS -->
 	<link href="main.css" rel="stylesheet">  
+
+    <!-- Custom styles for this template -->
     <link href="Product.css" rel="stylesheet">
   </head>
 
@@ -24,9 +25,7 @@
 
 	<nav class="site-header sticky-top py-1">
 		<div class="container d-flex flex-column flex-md-row justify-content-between">
-				<a class="py-2 d-none d-md-inline-block" href="LoginFirst.jsp">LOG IN</a>
-        		<a class="py-2 d-none d-md-inline-block" href="CreateAccount.jsp">SIGN UP</a>
-        		<a class="py-2 d-none d-md-inline-block" href="Cart.jsp">CART</a>
+				<a class="py-2 d-none d-md-inline-block" href="AskLogout.jsp">LOG OUT</a>
         </div>
     </nav>
     
@@ -34,69 +33,21 @@
     
     <nav class="site-header sticky-top py-1">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2" href="MainPage.jsp">
+        <a class="py-2" href="AdminMainPage.jsp">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="Women.jsp">Women's</a>
-        <a class="py-2 d-none d-md-inline-block" href="Men.jsp">Men's</a>
-        <a class="py-2 d-none d-md-inline-block" href="Kid.jsp">Kids'</a>
+        <a class="py-2 d-none d-md-inline-block" href="CsrManageCustomers.jsp">Customer</a>
+        <a class="py-2 d-none d-md-inline-block" href="CsrManageOrders.jsp">Order</a>
+        <a class="py-2 d-none d-md-inline-block" href="CsrManageShoes.jsp">Shoes</a>
       </div>
     </nav>
 
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">BLACK FRIDAY</h1>
-        <p class="lead font-weight-normal">Take 30% off your order of $99 or more</p>
-        <p class="lead font-weight-normal">Use Code:SHOPWITH2N</p>       
-        
-        <a class="btn btn-outline-secondary" href="#">SHOP NOW</a>
+        <h1 class="display-4 font-weight-normal">Management</h1>
       </div>
 
     </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">NIKE</h2>
-        </div>
-        <div  class="bg-light shadow-sm mx-auto" style=" width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\brand\nike.png" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
-        </div>
-      </div>
-      
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">ADIDAS</h2>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\brand\adidas.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
-        </div>
-      </div>
-    </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">JORDAN</h2>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\brand\jordan.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
-        </div>
-      </div>
-      
-     <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">VANS</h2>
-        </div>
-        <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        	<img src="D:\3Semester\Java\Assignment\ass3\Assignment3\images\brand\vans.jpg" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
-        </div>
-      </div>
-    </div>
-
-
-
-
 
     <footer class="container py-5">
       <div class="row">
