@@ -32,9 +32,9 @@ public class CsrCustomerController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 String connectionUrl = "jdbc:mysql://localhost:3306/mvcdb";
-		 String connectionUser = "root";
-		 String connectionPassword = "wonyunnaA9881!";
+		 String connectionUrl = "=";
+		 String connectionUser = "=";
+		 String connectionPassword = "";
 		 
 		 customerDAO =new CsrCustomerDAO(connectionUrl, connectionUser, connectionPassword);
      try {
