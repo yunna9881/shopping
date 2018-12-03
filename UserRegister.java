@@ -44,9 +44,9 @@ public class UserRegister extends HttpServlet {
 		String strStatus = "Username is available";
 		try
 		{
-			String url = "jdbc:mysql://localhost:3306/mvcdb";
-			String user = "root";
-			String pass = "wonyunnaA9881!";	
+		 String connectionUrl = "=";
+		 String connectionUser = "=";
+		 String connectionPassword = "";
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			con=DriverManager.getConnection(url, user, pass);
