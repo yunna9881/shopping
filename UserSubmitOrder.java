@@ -27,9 +27,9 @@ public class UserSubmitOrder extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		String connectionUrl = "jdbc:mysql://localhost:3306/mvcdb";
-		 String connectionUser = "root";
-		 String connectionPassword = "wonyunnaA9881!";
+		 String connectionUrl = "=";
+		 String connectionUser = "=";
+		 String connectionPassword = "";
 		 
 		 orderDAO =new CsrOrdersDAO(connectionUrl, connectionUser, connectionPassword);
 		
