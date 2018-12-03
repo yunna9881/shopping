@@ -26,9 +26,9 @@ public class ShoesController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		 String connectionUrl = "jdbc:mysql://localhost:3306/mvcdb";
-		 String connectionUser = "root";
-		 String connectionPassword = "wonyunnaA9881!";
+		 String connectionUrl = "=";
+		 String connectionUser = "=";
+		 String connectionPassword = "";
 		 
 		 shoesDAO =new ShoesDAO(connectionUrl, connectionUser, connectionPassword);
      try {
