@@ -46,9 +46,9 @@ public class CartAdding extends HttpServlet {
 	{
 		//PrintWriter out = response.getWriter();
 
-		 String connectionUrl = "jdbc:mysql://localhost:3306/mvcdb";
-		 String connectionUser = "root";
-		 String connectionPassword = "wonyunnaA9881!";
+		 String connectionUrl = "=";
+		 String connectionUser = "=";
+		 String connectionPassword = "";
 		 
 		 shoesDAO =new ShoesDAO(connectionUrl, connectionUser, connectionPassword);
 		 customerDAO=new CsrCustomerDAO(connectionUrl, connectionUser, connectionPassword);
