@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class AdminLogin
@@ -42,12 +43,12 @@ public class AdminLogin extends HttpServlet {
 		{
 			String url = "jdbc:mysql://localhost:3306/mvcdb";
 			String user = "root";
-			String pass = "";	
+			String pass = "wonyunnaA9881!";	
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 		
-			String userName = request.getParameter("useName");
-			String password = request.getParameter("passwd");
+			String userName = request.getParameter("userName");
+			String password = request.getParameter("password");
 
 			
 			con=DriverManager.getConnection(url, user, pass);
@@ -67,10 +68,12 @@ public class AdminLogin extends HttpServlet {
 				LoginNamePrint info = new LoginNamePrint();
 				info.setId(userName);
 				info.setPasswd(password);
-				request.setAttribute("information", info);
+				HttpSession session=request.getSession(); /////////
+				session.setAttribute("information", info); //////////
+				request.setAttribute("information", info); 
 
 				
-				RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("WelcomeAdmin.jsp");
 				rd.forward(request, response);
 			
 			

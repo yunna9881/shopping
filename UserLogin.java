@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class UserLogin
@@ -44,22 +45,22 @@ public class UserLogin extends HttpServlet {
 		{
 			String url = "jdbc:mysql://localhost:3306/mvcdb";
 			String user = "root";
-			String pass = "";	
+			String pass = "wonyunnaA9881!";	
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 		
-			String useName = request.getParameter("useName");
-			String passwd = request.getParameter("passwd");
+			String userName = request.getParameter("userName");
+			String password = request.getParameter("password");
 
 			
 			con=DriverManager.getConnection(url, user, pass);
 			System.out.println(con);
-			pr=con.prepareStatement("select * from customers where useName=? and password=?");		
+			pr=con.prepareStatement("select * from customers where userName=? and password=?");		
 		
 			
-			pr.setString(1, useName);
+			pr.setString(1, userName);
 			
-			pr.setString(2, passwd);
+			pr.setString(2, password);
 			rs=pr.executeQuery();
 			
 			
@@ -68,12 +69,14 @@ public class UserLogin extends HttpServlet {
 			{
 
 				LoginNamePrint info = new LoginNamePrint();
-				info.setId(useName);
-				info.setPasswd(passwd);
+				info.setId(userName);
+				info.setPasswd(password);
+				HttpSession session=request.getSession();
+				session.setAttribute("information", info);
 				request.setAttribute("information", info);
-
+				session.setAttribute("userName", userName);
 				
-				RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("WelcomeCustomer.jsp");
 				rd.forward(request, response);
 			
 			

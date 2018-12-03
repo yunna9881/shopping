@@ -1,6 +1,7 @@
 package assignment3;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class ShoesBean implements Serializable{
 	
@@ -11,11 +12,11 @@ public class ShoesBean implements Serializable{
 	private double price;
 
 	private static final long serialVersionUID = 1L;
-
+	
 	public ShoesBean(){
 		super();
 		};
-	
+
 public int getItemId() {
 		return itemId;
 	}

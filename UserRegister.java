@@ -46,15 +46,15 @@ public class UserRegister extends HttpServlet {
 		{
 			String url = "jdbc:mysql://localhost:3306/mvcdb";
 			String user = "root";
-			String pass = "";	
+			String pass = "wonyunnaA9881!";	
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			con=DriverManager.getConnection(url, user, pass);
 			
 			String bu = request.getParameter("bu");
 			 
-			String useName;
-			String passwd;
+			String userName;
+			String password;
 			String fName;
 			String lName;
 			String address;
@@ -66,9 +66,9 @@ public class UserRegister extends HttpServlet {
 			{	
 				try 
 				{
-					useName = request.getParameter("useName"); 
+					userName = request.getParameter("userName"); 
 	
-					String strQuery = "SELECT * FROM customers WHERE useName='" + useName +"'";
+					String strQuery = "SELECT * FROM customers WHERE userName='" + userName +"'";
 					PreparedStatement ps=con.prepareStatement(strQuery);
             
 					ResultSet rs = ps.executeQuery(strQuery);
@@ -87,17 +87,9 @@ public class UserRegister extends HttpServlet {
 			}
 			
 			if(bu.equals("REGISTER"))
-			{
-//				if(request.getParameter("useName") != null 
-//					&& request.getParameter("passwd") != null
-//					&& request.getParameter("fName") != null
-//					&& request.getParameter("lName") != null
-//					&& request.getParameter("address") != null
-//					&& request.getParameter("city") != null
-//					&& request.getParameter("code") != null)
-//				{   
-					useName=request.getParameter("useName");
-					passwd = request.getParameter("passwd");
+			{  
+					userName=request.getParameter("userName");
+					password = request.getParameter("password");
 					fName = request.getParameter("fName");
 					lName = request.getParameter("lName");
 					address = request.getParameter("address");
@@ -106,13 +98,13 @@ public class UserRegister extends HttpServlet {
 					try
 					{
 						String addQuery = "INSERT INTO customers"
-						+ "(useName, password, firstname, lastname, address, city, postalCode)"
+						+ "(userName, password, firstname, lastname, address, city, postalCode)"
 						+ " VALUE (?,?,?,?,?,?,?)";
 
 						pr = con.prepareStatement(addQuery);
 					
-						pr.setString(1, useName);
-						pr.setString(2, passwd);
+						pr.setString(1, userName);
+						pr.setString(2, password);
 						pr.setString(3, fName);
 						pr.setString(4, lName);
 						pr.setString(5, address);			

@@ -26,42 +26,48 @@ public class ShoesController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		
 		 String connectionUrl = "jdbc:mysql://localhost:3306/mvcdb";
 		 String connectionUser = "root";
-		 String connectionPassword = "";
+		 String connectionPassword = "wonyunnaA9881!";
 		 
 		 shoesDAO =new ShoesDAO(connectionUrl, connectionUser, connectionPassword);
      try {
+   	 
+   	  System.out.print("controller top");
    	  
 		 String choice = request.getParameter("submit");
-			
-			if (choice.equals("Add")) {
-				add(request,response);
-			}
-			else if (choice.equals("Edit")) {
-				edit(request,response);	
+		 
+		 if(choice!=null) {
+
+			 if (choice.equals("Add")) {
+					add(request,response);
 				}
-			
-			else if (choice.equals("List")){
-				list(request,response);
+				else if (choice.equals("Edit")) {
+					edit(request,response);	
+					System.out.print("inside edit");
+					}
 				
-			}
+				else if (choice.equals("RefreshList")){
+					list(request,response);	
+				}
+				 
+		 }else {
+			 System.out.print("else list");
+			 list(request,response);	
+		 }
+		 
      }
      catch(Exception e) {
    	  e.getMessage();
+   	  e.printStackTrace();
      }
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
-	
 	
 	public void add(HttpServletRequest request, HttpServletResponse response) {
 		try {
@@ -90,8 +96,9 @@ public class ShoesController extends HttpServlet {
 		request.setAttribute("message", message);
 		
 		//request.setAttribute("myBean", bean);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/CsrManageShoes.jsp");
-	        dispatcher.forward(request, response);
+			//RequestDispatcher dispatcher = request.getRequestDispatcher("/csrManageShoes.jsp");
+	        //dispatcher.forward(request, response);
+		list(request,response);
 	
 	}
 	catch(Exception e){
@@ -114,6 +121,7 @@ public class ShoesController extends HttpServlet {
 		bean.setCategory(category);
 		bean.setShoeSize(shoeSize);
 		bean.setPrice(price);
+		
 		boolean isSuccess=shoesDAO.editShoes(bean);
 		String message;
 		if (isSuccess) {
@@ -122,8 +130,9 @@ public class ShoesController extends HttpServlet {
 			message="Failed";
 		}
 		request.setAttribute("message", message);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/CsrManageShoes.jsp");
-	        dispatcher.forward(request, response);
+			//RequestDispatcher dispatcher = request.getRequestDispatcher("/csrManageShoes.jsp");
+	        //dispatcher.forward(request, response);
+		list(request,response);
 		}
 		catch (Exception e) {
 			e.getMessage();
@@ -137,8 +146,4 @@ public class ShoesController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/CsrManageShoes.jsp");
 		rd.forward(request, response);
 	}
-	
-	
-	
-	
 }

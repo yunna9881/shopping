@@ -44,7 +44,7 @@ public class Data extends HttpServlet {
 		{
 			String url = "jdbc:mysql://localhost:3306/mvcdb";
 			String user = "root";
-			String pass = "";	
+			String pass = "wonyunnaA9881!";	
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 		
